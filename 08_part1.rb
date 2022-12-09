@@ -21,7 +21,7 @@ def is_visible(index, row)
             are_after_all_lower = false
         end
     end
-    
+
     return are_before_all_lower || are_after_all_lower
 end
 
@@ -32,7 +32,6 @@ file_data_splited.each_with_index do |row, row_index|
     else
         # row sides are always visible
         counter_visible_trees += 2
-        # p counter_visible_trees
         row.each_with_index do |tree, index|
             unless index == 0 || row.count == index + 1 
                 column_trees = file_data_splited.map{|row| row[index].to_i}
